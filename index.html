@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ankita ❤️ Sumiran</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Comic Sans MS', cursive;
+    overflow: hidden;
+}
+
+.container {
+    background: white;
+    width: 90%;
+    max-width: 360px;
+    padding: 20px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+    z-index: 2;
+}
+
+.image-box img {
+    width: 160px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: #ff4d6d;
+    font-size: 21px;
+    margin: 10px 0;
+}
+
+.buttons {
+    margin-top: 15px;
+}
+
+button {
+    border: none;
+    border-radius: 30px;
+    padding: 14px 26px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#yesBtn {
+    background: #ff4d6d;
+    color: white;
+    font-size: 20px;
+}
+
+#noBtn {
+    background: #adb5bd;
+    color: white;
+    margin-left: 10px;
+}
+
+/* Ring animation */
+#ring {
+    display: none;
+    font-size: 60px;
+    animation: ringPop 1.4s ease forwards;
+}
+
+@keyframes ringPop {
+    0% { transform: scale(0); opacity: 0; }
+    70% { transform: scale(1.3); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+/* Final message */
+#message {
+    display: none;
+    font-size: 18px;
+    color: #ff4d6d;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+/* Fireworks */
+.firework {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    animation: explode 1s ease-out forwards;
+}
+
+@keyframes explode {
+    to {
+        transform: translate(var(--x), var(--y));
+        opacity: 0;
+    }
+}
+
+/* Floating hearts */
+.heart {
+    position: absolute;
+    bottom: -20px;
+    font-size: 18px;
+    animation: floatUp 6s linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🎶 Background Music -->
+<audio id="bgMusic" loop preload="auto">
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- 🎤 Voice Line (optional) -->
+<audio id="voiceLine">
+    <source src="voice.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+
+    <div class="image-box">
+        <img id="cuteImage" src="img1.png" alt="Love">
+    </div>
+
+    <h1>Ankita 💖 Will you be my Valentine?</h1>
+
+    <p style="font-size:14px;color:#777;">
+        I Love You Deviii ❤️<br>
+                     🫂
+    </p>
+
+    <div class="buttons">
+        <button id="yesBtn" onclick="sayYes()">YES 😍</button>
+<button id="noBtn" onclick="sayNo()">NO 🙈</button>
+
+       
+    </div>
+
+    <div id="ring">💍</div>
+
+    <div id="message">
+        🌹  
+        <b>
+        “Tum meri zindagi ka woh sukoon ho,<br>
+        jo lafzon mein bayaan nahi hota…<br>
+        Tum saath ho toh har khwaab mukammal lagta hai,<br>
+        aur har dua qubool hoti hai.”
+        </b>
+        <br><br>
+        <b>I Love You ❤️</b>
+        <br><br>
+        — <b>From your Sumiran ❤️🫂</b>
+    </div>
+
+</div>
+
+<!-- External JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
